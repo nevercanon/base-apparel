@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    font-family: 'Josefin Sans', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    text-align: left;
+    padding: 2rem;
+}
+
+.logo {
+    width: 30%;
+}
+
+.hero {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.hero-desktop {
+    display: none;
+}
+
+.text {
+    padding: 2.5rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: hsl(0, 6%, 24%);
+    letter-spacing: 10px;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+span {
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+p {
+    color: hsl(0, 36%, 70%);
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+form {
+    position: relative;
+}
+
+input[type="email"] {
+    background-color: transparent;
+    border: 1px solid hsla(0, 36%, 70%, 0.479);
+    padding: 1rem;
+    border-radius: 50px;
+    width: 100%;
+}
+
+form input[type="email"]:focus {
+    border-color: hsla(0, 36%, 70%, 0.479) !important;
+}
+
+input[type="email"]::placeholder {
+    color: hsla(0, 36%, 70%, 0.534);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+button {
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    padding: 0.8125rem 1.75rem;
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    right: -1.5rem;
+    box-shadow: 0 10px 20px hsla(0, 47%, 75%, 0.801);
+    transition: all 0.15s linear;
+}
+
+button:hover {
+    transform: scaleX(1.2);
+    transform: scaleY(1.05);
+    background: linear-gradient(135deg, hsl(0, 80%, 91%), hsl(0, 74%, 79%));
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    top: 0.7rem;
+    right: 3.5rem;
+    margin: 0 2rem;
+}
+
+form .error {
+    color: hsl(0, 93%, 68%);
+    border: 2px solid hsl(0, 93%, 68%);
+    display: inline;
+}
+
+.error-message {
+    position: absolute;
+    color: hsl(0, 93%, 68%);
+    font-size: 0.85rem;
+    margin: 0.5rem 1rem;
+    display: none;
+}
+
+.thank-you-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: hsl(0, 6%, 24%);
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+@media screen and (min-width: 62.5em) {
+    body {
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .first-half {
+        padding: 2rem 8rem;
+        display: flex;
+        flex-direction: column;
+        margin-right: 6rem;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    .logo {
+        min-width: 116px;
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 4rem;
+    }
+
+    p {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .text {
+        margin-bottom: 10rem;
+    }
+
+    .hero {
+        display: none;
+    }
+
+    .image-desktop {
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .hero-desktop {
+        display: inline;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    input[type="email"]::placeholder {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0.8125rem 2.5rem;
+    }
+}
